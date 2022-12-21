@@ -42,12 +42,15 @@ function compareMoves (myMove, aiMove) {
 
         if (aiMove == 1) {
             //tie
+            score.tie++;
         }
         else if (aiMove == 2) {
             //ai wins
+            score.loss++;
         }
         else if (aiMove == 3) {
             //i win
+            score.win++;
         }
 
 
@@ -56,12 +59,15 @@ function compareMoves (myMove, aiMove) {
 
         if (aiMove == 1) {
             //i win
+            score.win++;
         }
         else if (aiMove == 2) {
             //tie
+            score.tie++;
         }
         else if (aiMove == 3) {
             //ai win
+            score.loss++;
         }
 
     }
@@ -69,12 +75,15 @@ function compareMoves (myMove, aiMove) {
 
         if (aiMove == 1) {
             //ai win
+            score.loss++;
         }
         else if (aiMove == 2) {
             //i wins
+            score.win++;
         }
         else if (aiMove == 3) {
             //tie
+            score.tie++;
         }
 
     }
