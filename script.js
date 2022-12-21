@@ -1,6 +1,12 @@
 // Retrieve user from the DOM
 var generateMove = document.querySelector(".generate");
 
+var score = {
+    win: 0,
+    loss: 0,
+    tie: 0,
+}
+
 generateMove.addEventListener("click", playRound);
 // Start game
 function startGame() {
@@ -10,8 +16,8 @@ function startGame() {
 function playRound() {
     // Start game
     //getMyMove 
-    getAIMove() //getAIMove() 
-    //compareMoves
+    var aiMove = getAIMove() //getAIMove() 
+    compareMoves (myMove, aiMove) //compareMoves
     //display winner
     // keeping score
     // Replay or quit
@@ -24,10 +30,10 @@ function getMyMove() {
 }
 //getAIMove
 function getAIMove() {
-    var aiChoice = Math.floor(Math.random() * 3);
+    return Math.floor(Math.random() * 3);
 }
 //compareMoves
-function compareMoves () {
+function compareMoves (myMove, aiMove) {
     //rock = 1
     //paper = 2
     //scissors = 3
